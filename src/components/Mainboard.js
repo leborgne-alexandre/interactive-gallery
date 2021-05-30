@@ -9,40 +9,21 @@ const Mainboard = (props) => {
 
 
     return (
-        <Wrapper>
-            <Container>
 
-                {pins.map((pin, index) => {
+        <div className="mainboard__container">
 
-                    let { urls } = pin;
-                    return <Pin key={index} urls={urls} />
+            {pins.map((pin, index) => {
 
-                })}
+                let { urls } = pin;
+                return <Pin key={index} urls={urls} />
+
+            })}
 
 
-            </Container>
+        </div>
 
-        </Wrapper>
+
     );
 };
 
 export default Mainboard;
-
-const Wrapper = styled.div`
-    background-color: white;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin-top: 15px;
-    justify-content: center;
-    
-`
-
-const Container = styled.div`
-    column-count: 5;
-    column-gap: 5px;
-    margin: 0 auto;
-    height: 100%;
-    max-width: 1260px;
-    background-color:white;
-`
